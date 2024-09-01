@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formstyle.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Responsive Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="http://localhost:5000/register" method="post">.
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" name="fullname" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" name="dob" placeholder="Enter birth date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email ID</label>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="text" name="mobile" placeholder="Enter mobile number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select name="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Business Name</label>
+                            <input type="text" name="business_name" placeholder="Enter your Business Name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Business Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Business Type</label>
+                            <input type="text" name="business_type" placeholder="Enter Business type" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Tax ID Number</label>
+                            <input type="text" name="tax_id" placeholder="Enter Tax ID number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Business address</label>
+                            <input type="text" name="business_address" placeholder="Enter business address" required>
+                        </div>
+                        <div class="input-field">
+                            <label>IFSC CODE</label>
+                            <input type="text" name="ifsc_code" placeholder="Enter IFSC code" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Bank name</label>
+                            <input type="text" name="bank_name" placeholder="Enter your Bank name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Bank Account Number</label>
+                            <input type="number" name="bank_account_number" placeholder="Enter Bank Account Number" required>
+                        </div>
+                    </div>
+                    <button class="nextBtn" type="button">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>AADHAR CARD</label>
+                            <input type="file" name="aadhar_card" placeholder="Aadhar Card" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" name="nationality" placeholder="Enter nationality" required>
+                        </div>
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" name="state" placeholder="Enter your state" required>
+                        </div>
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" name="district" placeholder="Enter your district" required>
+                        </div>
+                        <div class="input-field">
+                            <label>VAT/GST registration</label>
+                            <input type="text" name="vat_gst_registration" placeholder="Enter VAT/GST registration" required>
+                        </div>
+                        <div class="input-field">
+                            <label>VAT/GST registration document</label>
+                            <input type="file" name="vat_gst_document" placeholder="Enter VAT/GST registration document" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Other Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Trade license</label>
+                            <input type="file" name="trade_license" placeholder="Enter Trade license" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Years in Business</label>
+                            <input type="number" name="years_in_business" placeholder="Enter years in business" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Insurance details</label>
+                            <input type="file" name="insurance_details" placeholder="Enter insurance details" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" name="password" placeholder="Enter password" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Confirm password</label>
+                            <input type="password" name="confirm_password" placeholder="Confirm password" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" name="mother_in_law_name" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        <div class="input-field">
+                            <button type="submit">Submit</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

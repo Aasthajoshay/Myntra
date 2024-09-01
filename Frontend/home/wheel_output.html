@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="wheel_ouput.css">
+    <script src="wheel_output.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #410d3b;
+            position: relative;
+        }
+        header {
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(230, 222, 222, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
+        }
+        header img {
+            height: 40px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+        }
+        main {
+            display: flex;
+            margin: 20px;
+            transform: scale(1.5);
+            transform-origin: top left;
+            z-index: 10;
+        }
+        .dress-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .dress-details img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .dress-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .sizes {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .sizes button {
+            padding: 10px 20px;
+            border: none;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .sizes button:hover {
+            background: linear-gradient(45deg, #0056b3, #004080);
+        }
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .actions button {
+            padding: 10px 20px;
+            border: none;
+            background: linear-gradient(45deg, #28a745, #218838);
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .actions button:hover {
+            background: linear-gradient(45deg, #218838, #1e7e34);
+        }
+        .side-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        .side-images img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            width: 100%;
+            background-color: #979090;
+            padding: 20px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: auto;
+        }
+        footer p {
+            margin: 0;
+            color: #777;
+        }
+        .confetti-container {
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            opacity: 0;
+        }
+        .confetti--animation-slow {
+            animation: confetti-slow 3s linear infinite;
+        }
+        .confetti--animation-medium {
+            animation: confetti-medium 2s linear infinite;
+        }
+        .confetti--animation-fast {
+            animation: confetti-fast 1s linear infinite;
+        }
+        @keyframes confetti-slow {
+            0% { opacity: 1; transform: translateY(0) rotate(0); }
+            100% { opacity: 0; transform: translateY(300px) rotate(360deg); }
+        }
+        @keyframes confetti-medium {
+            0% { opacity: 1; transform: translateY(0) rotate(0); }
+            100% { opacity: 0; transform: translateY(300px) rotate(360deg); }
+        }
+        @keyframes confetti-fast {
+            0% { opacity: 1; transform: translateY(0) rotate(0); }
+            100% { opacity: 0; transform: translateY(300px) rotate(360deg); }
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="indexseller.html">TrendWeave</a>
+            <a href="wheel.html">Play</a>
+        </nav>
+    </header>
+    <main>
+        <div class="dress-details">
+            <h2>Your new outfit is ready!</h2>
+            <img src="img2/1.jpg" alt="Dress">
+            <div class="dress-info:">
+                <p>Dress Details:</p>
+                <p font-family: Algerian, sans-serif;>Georgette x Kalamkari Fusion</p>
+                <p> Brought to life with a Shirt draped with a timeless Sari!</p>
+                <p>Dress Style: Traditional touch added</p>
+                <div class="sizes">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+                <div class="actions">
+                    <button>Like</button>
+                    <button>Save</button>
+                    <button>Try Again</button>
+                </div>
+            </div>
+        </div>
+        <div class="side-images">
+            <img src="img3/1e.jpg" alt="Dress 1">
+            <img src="img3/2e.jpg" alt="Dress 2">
+            <img src="img3/3e.jpg" alt="Dress 3">
+            <img src="img3/4e.jpg" alt="Dress 3">
+            <img src="sim.png" alt="Dress 3">
+            
+        </div>
+    </main>
+    <h1></h1>
+    <canvas id="canvas"></canvas>
+    <script>
+        function likeDress() {
+            alert('You liked the dress!');
+        }
+
+        function saveDress() {
+            alert('You saved the dress!');
+        }
+
+        function selectSize(size) {
+            console.log('Selected size:', size);
+        }
+
+        const Confettiful = function(el) {
+            this.el = el;
+            this.containerEl = null;
+            
+            this.confettiFrequency = 3;
+            this.confettiColors = ['#EF2964', '#00C09D', '#2D87B0', '#48485E', '#EFFF1D'];
+            this.confettiAnimations = ['slow', 'medium', 'fast'];
+            
+            this._setupElements();
+            this._renderConfetti();
+        };
+        
+        Confettiful.prototype._setupElements = function() {
+            const containerEl = document.createElement('div');
+            const elPosition = this.el.style.position;
+            
+            if (elPosition !== 'relative' && elPosition !== 'absolute') {
+                this.el.style.position = 'relative';
+            }
+            
+            containerEl.classList.add('confetti-container');
+            
+            this.el.appendChild(containerEl);
+            
+            this.containerEl = containerEl;
+        };
+        
+        Confettiful.prototype._renderConfetti = function() {
+            this.confettiInterval = setInterval(() => {
+                const confettiEl = document.createElement('div');
+                const confettiSize = (Math.floor(Math.random() * 3) + 7) + 'px';
+                const confettiBackground = this.confettiColors[Math.floor(Math.random() * this.confettiColors.length)];
+                const confettiLeft = (Math.floor(Math.random() * this.el.offsetWidth)) + 'px';
+                const confettiAnimation = this.confettiAnimations[Math.floor(Math.random() * this.confettiAnimations.length)];
+                
+                confettiEl
+            })}
